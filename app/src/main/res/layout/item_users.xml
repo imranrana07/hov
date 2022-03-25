@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUser"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="@dimen/_115sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background"
+            app:layout_constraintWidth_percent=".25"
+            android:scaleType="fitXY"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoginUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/ivUser"
+            app:layout_constraintStart_toEndOf="@id/ivUser"
+            tools:text="SnS SolutionSnS Sns"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:textColor="@color/_2b2b2b"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvLoginUsername"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginUsername"
+            android:layout_marginTop="@dimen/_4sdp"
+            tools:text="Android Apps Developer"
+            android:textStyle="bold"
+            android:textColor="@color/_2b2b2b"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:autoLink="web"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
