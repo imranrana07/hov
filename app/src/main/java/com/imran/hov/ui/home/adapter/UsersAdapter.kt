@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.imran.hov.R
 import com.imran.hov.core.ClickListener
-import com.imran.hov.data.model.UsersListDataClass
+import com.imran.hov.data.model.UsersListResponseClass
 import com.imran.hov.databinding.ItemUsersBinding
 
-class UsersAdapter(private val list: MutableList<UsersListDataClass>,
-                   private val itemClickListener: ClickListener<UsersListDataClass>):
+class UsersAdapter(private val list: MutableList<UsersListResponseClass>,
+                   private val itemClickListener: ClickListener<UsersListResponseClass>):
     RecyclerView.Adapter<UsersViewHolder>() {
 
     private lateinit var context:Context

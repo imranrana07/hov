@@ -1,13 +1,17 @@
 package com.imran.hov.di
 
 
+import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.imran.hov.BuildConfig
 import com.imran.hov.data.api.ApiCall
+import com.imran.hov.data.source.local.database.AppDatabase
+import com.imran.hov.data.source.local.database.UsersDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,17 +23,17 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class AppModule {
 
-//    @Singleton
-//    @Provides
-//    fun getAppDatabase(@ApplicationContext context: Context):AppDatabase {
-//        return AppDatabase.getDatabase(context)
-//    }
-//
-//    @Singleton
-//    @Provides
-//    fun getPhotoDao(appDatabase: AppDatabase):PhotoDao{
-//        return appDatabase.photoDao()
-//    }
+    @Singleton
+    @Provides
+    fun getAppDatabase(@ApplicationContext context: Context): AppDatabase {
+        return AppDatabase.getDatabase(context)
+    }
+
+    @Singleton
+    @Provides
+    fun getPhotoDao(appDatabase: AppDatabase):UsersDao{
+        return appDatabase.photoDao()
+    }
 
     @Provides
     fun logger(): HttpLoggingInterceptor{

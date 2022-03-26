@@ -4,7 +4,7 @@ package com.imran.hov.data.model
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class UsersListDataClass(
+data class UsersListResponseClass(
     @SerializedName("avatar_url")
     val avatarUrl: String?,
     @SerializedName("events_url")

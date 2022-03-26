@@ -4,7 +4,7 @@ import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.imran.hov.data.model.UsersListDataClass
+import com.imran.hov.data.model.UsersListResponseClass
 import com.imran.hov.data.repository.UsersRepository
 import com.imran.hov.utils.ApiException
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +15,7 @@ import javax.inject.Inject
 class UsersViewModel @Inject constructor(private val usersRepository: UsersRepository):ViewModel() {
     val error = MutableLiveData<String>()
     val progressBar = MutableLiveData<Int>()
-    val users = MutableLiveData<MutableList<UsersListDataClass>>()
+    val users = MutableLiveData<MutableList<UsersListResponseClass>>()
 
     fun getUsers(){
         progressBar.value = View.VISIBLE
