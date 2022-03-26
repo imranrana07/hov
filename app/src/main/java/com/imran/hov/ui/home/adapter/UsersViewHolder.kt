@@ -1,4 +1,4 @@
-package com.imran.hov.ui.home
+package com.imran.hov.ui.home.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.imran.hov.databinding.ItemUsersBinding

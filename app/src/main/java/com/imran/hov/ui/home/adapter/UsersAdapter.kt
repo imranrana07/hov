@@ -1,4 +1,4 @@
-package com.imran.hov.ui.home
+package com.imran.hov.ui.home.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

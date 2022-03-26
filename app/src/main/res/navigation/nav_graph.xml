@@ -10,5 +10,10 @@
         android:name="com.imran.hov.ui.home.UserListFragment"
         android:label="fragment_user_list"
         tools:layout="@layout/fragment_user_list" />
+    <fragment
+        android:id="@+id/usersDetailsFragment"
+        android:name="com.imran.hov.ui.user_details.UsersDetailsFragment"
+        android:label="fragment_users_details"
+        tools:layout="@layout/fragment_users_details" />
 
 </navigation>

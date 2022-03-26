@@ -2,6 +2,7 @@ package com.imran.hov.data.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class UsersListDataClass(
     @SerializedName("avatar_url")
@@ -40,4 +41,4 @@ data class UsersListDataClass(
     val type: String?,
     @SerializedName("url")
     val url: String?
-)
+):Serializable

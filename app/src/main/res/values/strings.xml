@@ -2,4 +2,9 @@
     <string name="app_name">Hov</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name: </string>
+    <string name="website">website: </string>
+    <string name="repo_url">Repo url: </string>
+    <string name="events_url">Events url: </string>
+    <string name="user_type">User type: </string>
 </resources>
