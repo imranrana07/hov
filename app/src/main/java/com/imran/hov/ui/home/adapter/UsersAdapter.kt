@@ -8,7 +8,6 @@ import com.bumptech.glide.Glide
 import com.imran.hov.R
 import com.imran.hov.core.ClickListener
 import com.imran.hov.data.model.UsersEntity
-import com.imran.hov.data.model.UsersListResponseClass
 import com.imran.hov.databinding.ItemUsersBinding
 
 class UsersAdapter(private val list: MutableList<UsersEntity>,

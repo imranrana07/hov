@@ -3,6 +3,7 @@ package com.imran.hov.data.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 @Entity(tableName = "users")
 data class UsersEntity(
@@ -43,4 +44,4 @@ data class UsersEntity(
     val type: String?,
     @SerializedName("url")
     val url: String?
-)
+):Serializable
