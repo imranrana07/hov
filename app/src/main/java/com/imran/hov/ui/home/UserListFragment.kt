@@ -36,7 +36,7 @@ class UserListFragment : BaseFragment<FragmentUserListBinding>(),ClickListener<U
         observers()
 
         binding.swipeLayout.setOnRefreshListener {
-//            usersViewModel.users
+            observers()
         }
     }
 
@@ -46,7 +46,9 @@ class UserListFragment : BaseFragment<FragmentUserListBinding>(),ClickListener<U
             binding.progressBar.isVisible = it is Resource.Loading && it.data.isNullOrEmpty()
 //            textViewError.isVisible = it is Resource.Error && it.data.isNullOrEmpty()
             it.error?.localizedMessage?.let {
-                    it1 -> toast(it1) }
+                    it1 -> toast(it1)
+            }
+            binding.swipeLayout.isRefreshing = false
         }
     }
 
