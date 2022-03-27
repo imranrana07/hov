@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy.Companion.REPLACE
 import androidx.room.Query
 import com.imran.hov.data.model.UsersEntity
 import com.imran.hov.data.model.UsersListResponseClass
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UsersDao {
@@ -13,5 +14,8 @@ interface UsersDao {
     suspend fun addUsers(userList: MutableList<UsersEntity>?)
 
     @Query("SELECT * FROM users")
-    suspend fun getUsers(): MutableList<UsersEntity>
+    fun getUsers(): Flow<MutableList<UsersEntity>>
+
+    @Query("DELETE FROM users")
+    suspend fun deleteAllUsers()
 }

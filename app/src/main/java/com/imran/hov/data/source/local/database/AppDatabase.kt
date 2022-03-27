@@ -10,7 +10,7 @@ import com.imran.hov.utils.DATABASE_NAME
 @Database(entities = [ UsersEntity::class], version = 1, exportSchema = false)
 //@TypeConverters(UrlTypeConverter::class)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun photoDao(): UsersDao
+    abstract fun userDao(): UsersDao
 
     companion object {
         @Volatile

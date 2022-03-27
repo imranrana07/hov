@@ -32,7 +32,7 @@ class AppModule {
     @Singleton
     @Provides
     fun getPhotoDao(appDatabase: AppDatabase):UsersDao{
-        return appDatabase.photoDao()
+        return appDatabase.userDao()
     }
 
     @Provides
